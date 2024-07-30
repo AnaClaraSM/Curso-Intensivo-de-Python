@@ -1,0 +1,3 @@
+PYTHON_WORK
+
+Esta pasta foi criada para armazenar os exercícios e projetos desenvolvidos ao longo do aprendizado de Python com o livro Curso Intensivo de Python (3ª Edição), de Erick Matthes.
