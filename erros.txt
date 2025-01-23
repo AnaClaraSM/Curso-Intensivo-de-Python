@@ -16,3 +16,42 @@ Explicação:
 
 Solução:
     message = f"My first bicycle was a {bicycles[0].title()}"
+
+
+
+23-01-2025 - 15h33
+
+Traceback (most recent call last):
+  File "c:\Users\itsan\Downloads\Programação\python_work\Cap3\corredoresF1.py", line 3, in <module>
+    corredores = {hamilton, leclerc, verstappen, tsunoda, antonelli, russel}
+                  ^^^^^^^^
+NameError: name 'hamilton' is not defined
+
+Explicação: Faltou envolver os elementos, os quais eram textos, da lista entre aspas
+
+
+23-01-2025 - 15h36
+
+# Exercício: crie uma lista com o tema que desejar, armazenando diversos exemplos, e use a lista para exibir declarações sobre seus itens.
+
+corredores = {"lewis hamilton", "charles leclerc", "max verstappen", "yuki tsunoda", "andrea kimi antonelli", "george russel"}
+
+print("Segue abaixo alguns dos corredores da Fórmula 1, Temporada de 2025.")
+print(corredores[0].title())
+print(corredores[1].title())
+print(corredores[2].title())
+print(corredores[3].title())
+print(corredores[4].title())
+print(corredores[5].title())
+
+Saída:
+Segue abaixo alguns dos corredores da Fórmula 1, Temporada de 2025.
+Traceback (most recent call last):
+  File "c:\Users\itsan\Downloads\Programação\python_work\Cap3\corredoresF1.py", line 6, in <module>
+    print(corredores[0].title())
+          ~~~~~~~~~~^^^
+TypeError: 'set' object is not subscriptable
+
+GPT: O erro ocorre porque você está tentando acessar um elemento de um conjunto (set) como se fosse uma lista, mas conjuntos em Python não são indexados, ou seja, não possuem uma ordem definida. Por isso, não é possível acessar elementos pelo índice, como você tentou fazer com corredores[0].
+
+Explicação: a lista estava envolvida em chaves {} ao invés de colchetes [], e por isso foi tratada como um conjunto 'set' (O QUE É ISSO?), ao invés de como uma lista indexada. Portanto, ocorreu um erro ao referenciar seus elementos por índices numéricos, pois conjuntos em python não são indexados. OBS.: Aparentemente aqui, conjunto seria uma espécie de objeto. As chaves em torno do conteúdo o "definiram" como um objeto (não sendo indexado), e não como lista (a qual é indexada)
