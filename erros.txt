@@ -55,3 +55,39 @@ TypeError: 'set' object is not subscriptable
 GPT: O erro ocorre porque você está tentando acessar um elemento de um conjunto (set) como se fosse uma lista, mas conjuntos em Python não são indexados, ou seja, não possuem uma ordem definida. Por isso, não é possível acessar elementos pelo índice, como você tentou fazer com corredores[0].
 
 Explicação: a lista estava envolvida em chaves {} ao invés de colchetes [], e por isso foi tratada como um conjunto 'set' (O QUE É ISSO?), ao invés de como uma lista indexada. Portanto, ocorreu um erro ao referenciar seus elementos por índices numéricos, pois conjuntos em python não são indexados. OBS.: Aparentemente aqui, conjunto seria uma espécie de objeto. As chaves em torno do conteúdo o "definiram" como um objeto (não sendo indexado), e não como lista (a qual é indexada)
+
+16h37
+
+quiz = [ -> alertando "was not close"
+    # Pergunta 1 (índice 0)
+    { -> alertando "was not close"
+        "pergunta": "Qual piloto atual detém o recorde de mais títulos mundiais na Fórmula 1?"
+        "alternativas": ["A) Lewis Hamilton", "B) Sebastian Vettel", "C) Max Verstappen", "D) Fernando Alonso"]
+        "resposta_correta": "A" 
+    }
+    # Pergunta 2 (índice 1)
+    {
+
+Faltavam as vírgulas entre os itens do objeto {}, e entre os objetos da lista []. Obs, mesmo colocando vírgula entre os objetos, o [ continua a acusar não fechamento enquanto não forem virgulados os elementos dentro dos objetos
+
+COrreção
+
+# Jogo de perguntas e respostas sobre a Fórmula 1
+
+# Fazer uma lista de objetos para armazenar as perguntas, respostas e alternativas
+
+quiz = [
+    # Pergunta 1 (índice 0)
+    {
+        "pergunta": "Qual piloto atual detém o recorde de mais títulos mundiais na Fórmula 1?",
+        "alternativas": ["A) Lewis Hamilton", "B) Sebastian Vettel", "C) Max Verstappen", "D) Fernando Alonso"],
+        "resposta_correta": "A"
+    },
+    # Pergunta 2 (índice 1)
+    {
+        "pergunta": "Qual equipe venceu o campeonato de construtores de 2024 na Fórmula 1?",
+        "alternativas": ["A) Mercedes", "B) Red Bull Racing", "C) Ferrari", "D) McLaren"],
+        "resposta_correta": "B" 
+    }
+    ...
+]

@@ -119,3 +119,47 @@ corredoresF1 = [hamilton, leclerc, verstappen]
 #Usa o método title() para imprimir o primeiro elemento da lista com a inicial maiúscula
 print(corredoresF1[0].title()) #Imprime Hamilton
 ```
+
+
+
+## Loops
+
+### For in
+
+for elemento in lista:
+    comandos
+
+O for in pode ser usado para percorrer listas (ou strings ou números) e realizar ações com seus elementos individuais
+
+Basta inserir, após o for, um nome que irá referenciar os elementos da lista, seguido de in e do nome da lista
+
+#Para cada elemento na lista, imprime o elemento
+#Percorre a lista quiz e a cada elemento (referenciado como question), armazena-o em uma variável (nesse caso question) e, nesse caso, ainda o imprime
+for question in quiz:
+    print(f"{question}\n")
+
+A estrutura do for é a seguinte:
+for item in colecao:
+    # Código que será executado para cada item
+
+item: Representa cada elemento da coleção, que vai mudando a cada iteração do loop.
+colecao: É o objeto que contém os itens que você quer percorrer (pode ser uma lista, string, etc.).
+
+
+Exemplo 1: Percorrendo uma lista
+Vamos ver um exemplo simples com uma lista de frutas:
+
+    frutas = ["maçã", "banana", "laranja"]
+
+    for fruta in frutas:
+        print(fruta)
+
+Como funciona?
+O for começa a execução e pega o primeiro item da lista frutas, que é "maçã", e coloca na variável fruta.
+O código dentro do for (neste caso, print(fruta)) é executado, imprimindo "maçã".
+O for passa para o próximo item da lista, que é "banana", e faz o mesmo processo.
+Isso acontece até que todos os itens da lista tenham sido percorridos.
+Saída:
+    maçã
+    banana
+    laranja
