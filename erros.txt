@@ -1,0 +1,18 @@
+23-01-2025 - 12h47
+
+Resultado esperado: 
+    My first bicycle was a Trek
+
+Código: 
+    bicycles = ['trek', 'cannondale', 'redline', 'specialized']
+    message = f"My first bicycle was a {bicycles[0].title}"
+    print(message)
+
+Resultado obtido:
+    My first bicycle was a <built-in method title of str object at 0x000001EE356854A0>
+
+Explicação:
+    o método title foi inserido sem os parênteses. Todo método deve ser chamado com parêntes, que são parte de sua estrutura, diferentemente dos atributos, que não os possuem.
+
+Solução:
+    message = f"My first bicycle was a {bicycles[0].title()}"

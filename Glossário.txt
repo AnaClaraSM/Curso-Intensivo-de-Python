@@ -1,0 +1,7 @@
+Prompt:
+
+Traceback: relatório de erros retornado pelo python, caso haja um erro significativo no código.
+
+Realce de Sintaxe: recurso dos editores de código que representa partes do código com cores diferentes para distinção e realce da escrita/sintaxe. Ex.: funções com cor azul, textos em amarelo.
+
+Pylance: extensão do VSCode para Python que fornece análise estática de código Python; "Pylance is an extension that works alongside Python in Visual Studio Code to provide performant language support."
