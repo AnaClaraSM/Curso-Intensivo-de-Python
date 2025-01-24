@@ -91,3 +91,23 @@ quiz = [
     }
     ...
 ]
+
+
+
+24-01-2025 - 10h14
+
+
+Resultado esperado: 
+    Criação de uma lista com 3 elementos de tipo string
+
+Código: 
+    corredoresF1 = [Hamilton, Leclerc, Verstappen]
+
+Resultado obtido:
+    Traceback (most recent call last): File "<stdin>", line 1, in <module> NameError: name 'Hamilton' is not defined
+
+Explicação:
+    Os nomes dentro da lista não estavam entre aspas, logo, não foram reconhecidos como strings, mas talvez como nomes de variável. O erro indica que o nome Hamilton (primeiro nome encontrado na lista) não foi previamente definido no programa, ou seja, a variável Hamilton não foi criada, portanto não poderia ser usada.
+
+Solução:
+    corredoresF1 = ["Hamilton", "Leclerc", "Verstappen"]

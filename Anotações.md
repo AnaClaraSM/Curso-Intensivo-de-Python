@@ -103,7 +103,7 @@ nomeDaLista[i] #Em que i é o número do índice
 
 #Exemplo:
 
-corredoresF1 = [Hamilton, Leclerc, Verstappen]
+corredoresF1 = ["Hamilton", "Leclerc", "Verstappen"]
 
 print(corredoresF1[0]) #Retorna o primeiro item da lista (Hamilton)
 print(corredoresF1[1]) #Retorna Leclerc
@@ -114,11 +114,16 @@ Os métodos de string também podem ser usados nos elementos de listas. Exemplo:
 
 ```python
 # Nomes dos corredores em minúsculas
-corredoresF1 = [hamilton, leclerc, verstappen]
+corredoresF1 = ["hamilton", "leclerc", "verstappen"]
 
 #Usa o método title() para imprimir o primeiro elemento da lista com a inicial maiúscula
 print(corredoresF1[0].title()) #Imprime Hamilton
 ```
+
+
+
+
+
 
 
 
@@ -193,3 +198,70 @@ for element in quiz[0].values():
 #Para acessar tanto as chaves como os valores de um dicionário, pode-se usar o método .items() do python, que retorna pares chave-valor (key-value)
 for chave, valor in quiz[0].items():
     print(f"{chave} = {valor}")
+
+### Enumerate - Percorrer e enumerar elementos de listas 
+
+O enumerate é uma função do python que permite enumerar os itens de uma lista enquanto ela é percorrida.
+A cada iteração do loop, a função enumerate retorna dois valores:
+- O índice do elemento, começando em 0, por padrão (pode ser alterado com o start)
+- O elemento da lista.
+Como o enumerate retorna dois valores, é preciso inserir duas variáveis após o for (ao invés de só uma) para que possam armazenar cada uma um valor. Ou seja, é preciso inserir uma variável para receber o índice, e outra para o elemento em si.
+
+Ex.: 
+```python
+corredoresF1 = ["Hamilton", "Leclerc", "Verstappen"]
+
+# Loop com enumeração de elementos
+for indice, corredor in enumerate(corredoresF1):
+    print(f"Corredor {indice}: {corredor}")
+```
+Retornou:
+```
+Corredor 0: Hamilton  
+Corredor 1: Leclerc   
+Corredor 2: Verstappen
+```
+Observe que o primeiro corredor foi nomeado como "Corredor 0", ao invés de 1, pois a enumeração de índices começa em 0. 
+
+Uma forma de resolver isso seria somando 1 à variável indice no print. Assim:
+```python
+# Loop com enumeração de elementos
+for indice, corredor in enumerate(corredoresF1):
+    # Soma 1 ao índice, para contar de 1 em diante
+    print(f"Corredor {indice + 1}: {corredor}")
+```
+Retorna:
+```
+Corredor 1: Hamilton  
+Corredor 2: Leclerc   
+Corredor 3: Verstappen
+```
+
+
+Em python, porém, há uma forma mais prática, que elimina cálculos extras, o start.
+
+O start é uma parâmetro opcional da função enumerate. Ele permite definir o ponto de início da contagem de índice retornada pelo enumerate (ou seja, não muda a indexação real da lista, só a contagem retornada pelo enumerate no loop). 
+
+Como usar:
+```python
+# Loop com enumeração de elementos
+enumerate(iteravel, start=valor_inicial)
+
+# Exemplo
+enumerate(corredoresF1, start=1)
+```
+// Iterável:
+
+Diferenças +1 e start=1
+
++1 no print
+- É apenas uma manipulação visual para exibição. A indexação da lista a partir zero, dentro ou fora do loop, permanece inalterada.
+- Útil quando se quer manter o índice original (zero-based) e alterar apenas a visualização final.
+- Útil para situações em que a lógica do índice importa (ex.: acessar itens na lista pelo índice real).
+
+start=1
+- Mais prático, direto e intuitivo.
+- Elimina cálculos a mais e deixa o código mais limpo.
+- Altera o número inicial do índice retornado pelo enumerate.
+- Afeta como o número do índice aparece durante o loop, sem mudar a lista original.
+- Útil quando se quer que o índice sempre comece de um valor específico, sem precisar manipular a exibição no loop. Ex: Numeração de perguntas, páginas ou qualquer coisa que o usuário veja.
