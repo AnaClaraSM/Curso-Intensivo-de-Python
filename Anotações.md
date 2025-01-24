@@ -163,3 +163,33 @@ Saída:
     maçã
     banana
     laranja
+
+
+
+#print("Bem-vindo ao Quiz de Fórmula 1! Responda as perguntas a seguir e descubra o quanto você sabe sobre o esporte.")
+#print() #Line Break (Isso é uma boa prática???)
+#print(f"Pergunta {i+1}: {quiz[i]["pergunta"]}")
+#print(quiz[i]["alternativas"][0])
+#print(quiz[i]["alternativas"][1])
+#print(quiz[i]["alternativas"][2])
+#print(quiz[i]["alternativas"][3])
+#print("Digite sua resposta:")
+#print() #Linha em branco entre as perguntas
+
+#Para cada elemento na lista, imprime o elemento
+#Percorre a lista quiz e a cada elemento (referenciado como question), armazena-o em uma variável (nesse caso question) e impr
+for question in quiz:
+    print(f"{question}\n")
+
+#Percorre os elementos de um dicionário (quiz[0] é o primeiro elemento da lista quiz, é um objeto/dicionário), ou seja, as chaves. Retorna apenas as chaves sem os valores 
+for element in quiz[0]:
+    print(f"{element}\n")
+
+#Para acessar os valores das chaves de um dicionário, pode-se usar o método .values() do python
+#Percorre cada valor do dicionário (quiz[0]), e imprime
+for element in quiz[0].values():
+    print(f"{element}\n")
+
+#Para acessar tanto as chaves como os valores de um dicionário, pode-se usar o método .items() do python, que retorna pares chave-valor (key-value)
+for chave, valor in quiz[0].items():
+    print(f"{chave} = {valor}")
