@@ -1,6 +1,6 @@
 # Jogo de perguntas e respostas sobre a Fórmula 1 - Quiz (teste)
 
-# Fazer uma lista de objetos (dicionários) para armazenar as perguntas, respostas e alternativas
+# Lista de objetos (dicionários) para armazenar as perguntas, respostas e alternativas
 quiz = [
     # Pergunta 1 (índice 0)
     {
@@ -64,9 +64,6 @@ quiz = [
     }  
 ]
 
-
-# Variável para armazenar número de questões do quiz? (len())
-
 # Variável para armazenar número de acertos do usuário
 acertos = 0
 
@@ -78,6 +75,8 @@ print("   Responda as questões a seguir e veja    ")
 print("   se é um expert em Fórmula 1! 🏎️💨      ")
 print("===========================================")
 print()
+# print("Está pronto para começar?")
+# print()
 
 # Percorre cada pergunta (item/dicionário) do quiz (lista), enumerando-as (a partir do 1)
 # Para cada número e pergunta do quiz
@@ -92,22 +91,19 @@ for numero, pergunta in enumerate(quiz, start=1):
         print(alternativa)
     
     # Recebe a resposta do usuário
-    resposta_usuario = input("Digite sua resposta (apenas a letra da alternativa):")
+    resposta_usuario = input("Digite sua resposta (A, B, C ou D):")
     
     # Verifica se a resposta do usuário para a pergunta está correta. 
     # Conversão para maiúscula para garantir compatibilidade com a resposta certa armazenada
     if (resposta_usuario.upper() == pergunta["resposta_correta"]):
-        # Se correta
-        print("Você acertou!") #Teste
-        # Conta o acerto
+        # Se sim, conta o acerto
         acertos += 1
-        print(acertos) #Teste
 
     # Linha em branco para separar as perguntas
     print()
 
-# Exibe a quantidade de acertos do usuário
-print(f"Você acertou {acertos} de 10 questões.")
+# Exibe a quantidade de acertos do usuário em relação ao total
+print(f"Você acertou {acertos} de {len(quiz)} questões.")
 
 # Verifica a quantidade de acertos de usuário e exibe uma mensagem personalizada
 # 9-10 acertos
@@ -126,3 +122,4 @@ elif acertos > 0:
 else:
     print("Ah, parece que você ainda não pegou o ritmo do jogo! Mas tudo bem, todo mundo começa de algum lugar. Assista às corridas, leia sobre os pilotos e tente o quiz novamente depois!")
 
+print()

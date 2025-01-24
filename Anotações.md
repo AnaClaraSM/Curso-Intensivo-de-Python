@@ -288,3 +288,7 @@ idade = int(input("Qual a sua idade"))
 ```
 
 Obs.: Se o usuário inserir algo inválido (como texto em vez de um número), o programa pode gerar um erro. Para evitar isso, você pode usar um bloco try-except.
+
+
+#
+O python tem como boa prática deixar duas linhas vazias no fim do programa?
