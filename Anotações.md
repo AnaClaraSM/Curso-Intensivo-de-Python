@@ -265,3 +265,15 @@ start=1
 - Altera o número inicial do índice retornado pelo enumerate.
 - Afeta como o número do índice aparece durante o loop, sem mudar a lista original.
 - Útil quando se quer que o índice sempre comece de um valor específico, sem precisar manipular a exibição no loop. Ex: Numeração de perguntas, páginas ou qualquer coisa que o usuário veja.
+
+
+## Entrada de Usuário 
+
+### Input
+
+A função input() permite solicitar uma entrada de dado ao usuário através do terminal.
+
+O valor retornado pelo input() será sempre uma string. Para trabalhar com outros tipos, é preciso converter o valor manualmente.
+
+Ao usar input() é preciso criar uma variável para armazenar o valor que o usuário digitará, e pode-se também inserir uma mensagem.
+

@@ -64,15 +64,19 @@ quiz = [
     }  
 ]
 
-# Percorre cada pergunta (item/dicionário) do quiz (lista), enumerando-as ()
-# Para cada pergunta (e cada número de pergunta) do quiz
-for numero, pergunta in enumerate(quiz):
-    # Acessa e imprime o número da pergunta e o enunciado
-    print(f"{numero+1}. {pergunta["enunciado"]}")
+# Percorre cada pergunta (item/dicionário) do quiz (lista), enumerando-as (a partir do 1)
+# Para cada número e pergunta do quiz
+for numero, pergunta in enumerate(quiz, start=1):
+
+    # Imprime o número da pergunta e o enunciado
+    print(f"{numero}. {pergunta["enunciado"]}")
     # Percorre a lista de alternativas da pergunta. 
     # Para cada alternativa
     for alternativa in pergunta["alternativas"]:
         # Imprime a alternativa
         print(alternativa)
+    
+    # Recebe a resposta do usuário 
+
     # Linha em branco para separar as perguntas
     print()
