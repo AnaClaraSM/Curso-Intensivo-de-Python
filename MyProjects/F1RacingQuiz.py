@@ -64,8 +64,20 @@ quiz = [
     }  
 ]
 
+
+# Variável para armazenar número de questões do quiz? (len())
+
 # Variável para armazenar número de acertos do usuário
 acertos = 0
+
+# Mensagem incial
+print("===========================================")
+print("  🏁 BEM-VINDO AO QUIZ DE FÓRMULA 1! 🏁   ")
+print("===========================================")
+print("   Responda as questões a seguir e veja    ")
+print("   se é um expert em Fórmula 1! 🏎️💨      ")
+print("===========================================")
+print()
 
 # Percorre cada pergunta (item/dicionário) do quiz (lista), enumerando-as (a partir do 1)
 # Para cada número e pergunta do quiz
@@ -86,13 +98,17 @@ for numero, pergunta in enumerate(quiz, start=1):
     # Conversão para maiúscula para garantir compatibilidade com a resposta certa armazenada
     if (resposta_usuario.upper() == pergunta["resposta_correta"]):
         # Se correta
-        print("Você acertou!")
+        print("Você acertou!") #Teste
         # Conta o acerto
         acertos += 1
-        print(acertos)
-    # Se errada
-    else:
-        print("Você errou.")
+        print(acertos) #Teste
 
     # Linha em branco para separar as perguntas
     print()
+
+# Exibe a quantidade de acertos do usuário
+print(f"Você acertou")
+# Verifica a quantidade de acertos de usuário e exibe uma mensagem personalizada
+# if acertos > 10:
+#     print
+
