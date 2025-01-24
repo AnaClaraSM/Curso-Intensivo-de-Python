@@ -277,3 +277,14 @@ O valor retornado pelo input() será sempre uma string. Para trabalhar com outro
 
 Ao usar input() é preciso criar uma variável para armazenar o valor que o usuário digitará, e pode-se também inserir uma mensagem.
 
+```python
+resposta = input("Mensagem")
+
+# Exemplos
+nome = input("Qual o seu nome?")
+
+# Conversão para inteiro
+idade = int(input("Qual a sua idade"))
+```
+
+Obs.: Se o usuário inserir algo inválido (como texto em vez de um número), o programa pode gerar um erro. Para evitar isso, você pode usar um bloco try-except.

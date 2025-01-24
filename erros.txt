@@ -111,3 +111,15 @@ Explicação:
 
 Solução:
     corredoresF1 = ["Hamilton", "Leclerc", "Verstappen"]
+
+
+
+11h51
+
+print(f"{numero}. {pergunta["enunciado"]}") -> INCORRETO MESMO QUE FUNCIONE
+
+Nunca use as mesmas aspas de fora dentro da string!
+
+print(f"{numero}. {pergunta['enunciado']}") -> CORRETO, ASPAS DIFERENTES
+
+print(f"{numero}. {pergunta[\"enunciado\"]}") -> CORRETO, ESCAPE DAS ASPAS

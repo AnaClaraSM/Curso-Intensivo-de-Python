@@ -64,19 +64,35 @@ quiz = [
     }  
 ]
 
+# Variável para armazenar número de acertos do usuário
+acertos = 0
+
 # Percorre cada pergunta (item/dicionário) do quiz (lista), enumerando-as (a partir do 1)
 # Para cada número e pergunta do quiz
 for numero, pergunta in enumerate(quiz, start=1):
 
-    # Imprime o número da pergunta e o enunciado
-    print(f"{numero}. {pergunta["enunciado"]}")
+    # Imprime o número da pergunta e o enunciado - Não usar as mesmas aspas de fora dentro da string
+    print(f"{numero}. {pergunta['enunciado']}")
     # Percorre a lista de alternativas da pergunta. 
     # Para cada alternativa
     for alternativa in pergunta["alternativas"]:
         # Imprime a alternativa
         print(alternativa)
     
-    # Recebe a resposta do usuário 
+    # Recebe a resposta do usuário
+    resposta_usuario = input("Digite sua resposta (apenas a letra da alternativa):")
+    
+    # Verifica se a resposta do usuário para a pergunta está correta. 
+    # Conversão para maiúscula para garantir compatibilidade com a resposta certa armazenada
+    if (resposta_usuario.upper() == pergunta["resposta_correta"]):
+        # Se correta
+        print("Você acertou!")
+        # Conta o acerto
+        acertos += 1
+        print(acertos)
+    # Se errada
+    else:
+        print("Você errou.")
 
     # Linha em branco para separar as perguntas
     print()
