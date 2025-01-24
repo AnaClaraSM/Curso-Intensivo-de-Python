@@ -107,8 +107,22 @@ for numero, pergunta in enumerate(quiz, start=1):
     print()
 
 # Exibe a quantidade de acertos do usuário
-print(f"Você acertou")
+print(f"Você acertou {acertos} de 10 questões.")
+
 # Verifica a quantidade de acertos de usuário e exibe uma mensagem personalizada
-# if acertos > 10:
-#     print
+# 9-10 acertos
+if acertos > 8:
+    print("Você é um mestre em Fórmula 1! Seu conhecimento é de um comentarista esportivo. Continue acompanhando todas as corridas, pois você claramente é apaixonado por esse esporte!")
+# 7-8 acertos
+elif acertos > 6:
+    print("Excelente desempenho! Você sabe muito sobre Fórmula 1 e claramente acompanha o esporte com atenção. Com mais algumas corridas, você se tornará um especialista!")
+# 4-6 acertos
+elif acertos > 3:
+    print("Bom trabalho! Seu conhecimento é sólido, mas ainda há espaço para crescer. Que tal revisar alguns detalhes e assistir às corridas antigas para se aprofundar mais?")
+# 1-3 acertos
+elif acertos > 0:
+    print("Você está no começo da sua jornada na Fórmula 1. Não desanime! Quanto mais você acompanhar as corridas e explorar a história do esporte, mais vai aprender. Vamos acelerar no aprendizado!")
+# 0 acertos
+else:
+    print("Ah, parece que você ainda não pegou o ritmo do jogo! Mas tudo bem, todo mundo começa de algum lugar. Assista às corridas, leia sobre os pilotos e tente o quiz novamente depois!")
 
