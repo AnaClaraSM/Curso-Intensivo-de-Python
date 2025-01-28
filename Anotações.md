@@ -120,10 +120,17 @@ corredoresF1 = ["hamilton", "leclerc", "verstappen"]
 print(corredoresF1[0].title()) #Imprime Hamilton
 ```
 
+<!-- ### Métodos de Listas -->
 
+append() -> adiciona um elemento ao final de uma lista. Recebe como argumento o elemento a ser acrescentado, assim:
 
+```python
+corredoresF1 = ["Hamilton", "Leclerc", "Verstappen"]
 
+corredores.append("Russel")
 
+corredoresF1 #Retorna ['Hamilton', 'Leclerc', 'Verstappen', 'Russel']
+```
 
 
 
@@ -292,3 +299,15 @@ Obs.: Se o usuário inserir algo inválido (como texto em vez de um número), o 
 
 #
 O python tem como boa prática deixar duas linhas vazias no fim do programa?
+
+
+
+## Funções Embutidas (Built-In) do Python
+
+**len():** função embutida (built-in) do python que retorna o o número de elementos de um objeto (listas, strings, tuplas, dicionários, conjuntos, etc.), ou seja, seu tamanho. Recebe como parâmetro o próprio objeto. Usa-se assim:
+
+```python
+corredoresF1 = ["Hamilton", "Leclerc", "Verstappen"]
+
+len(corredoresF1) #Retorna 3 -> o número de elementos da lista
+```

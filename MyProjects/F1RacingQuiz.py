@@ -1,3 +1,5 @@
+import os # Importa OS (Operationa System)
+
 # Jogo de perguntas e respostas sobre a Fórmula 1 - Quiz (teste)
 
 # Lista de objetos (dicionários) para armazenar as perguntas, respostas e alternativas
@@ -64,10 +66,14 @@ quiz = [
     }  
 ]
 
-# Variável para armazenar número de acertos do usuário
-acertos = 0
+acertos = 0 # Armazena o número de acertos do usuário
+total_perguntas = len(quiz) #Obtém o total de perguntas do quiz
+
+# Limpa o terminal (cls se for windows, clear se outro)
+os.system("cls" if os.name == 'nt' else 'clear')
 
 # Mensagem incial
+print()
 print("===========================================")
 print("  🏁 BEM-VINDO AO QUIZ DE FÓRMULA 1! 🏁   ")
 print("===========================================")
@@ -90,21 +96,31 @@ for numero, pergunta in enumerate(quiz, start=1):
         # Imprime a alternativa
         print(alternativa)
     
-    # Recebe a resposta do usuário
-    resposta_usuario = input("Digite sua resposta (A, B, C ou D):")
+    # Recebe a resposta do usuário e converte para maiúscula (para  para garantir compatibilidade com a resposta certa armazenada)
+    resposta_usuario = input("Digite sua resposta (A, B, C ou D):").upper()
     
-    # Verifica se a resposta do usuário para a pergunta está correta. 
-    # Conversão para maiúscula para garantir compatibilidade com a resposta certa armazenada
-    if (resposta_usuario.upper() == pergunta["resposta_correta"]):
+    # Verifica se a resposta do usuário para a pergunta está correta.
+    if (resposta_usuario == pergunta["resposta_correta"]):
         # Se sim, conta o acerto
         acertos += 1
+        #Exibe mensagem de acerto [OPCIONAL]
+        print("✅ Resposta Correta!")
+    else:
+        #Exibe mensagem de erro [OPCIONAL]
+        print(f"❌ Resposta Errada! A resposta correta é {pergunta['resposta_correta']}.") 
+    
+    #Quizzes não costumam exibir as respostas, a fim de poderem ser refeitos
 
     # Linha em branco para separar as perguntas
     print()
 
-# Exibe a quantidade de acertos do usuário em relação ao total
-print(f"Você acertou {acertos} de {len(quiz)} questões.")
+# [OPCIONAL] Calcula a porcentagem de acertos
+porcentagem_acertos = (acertos / total_perguntas) * 100
 
+# Exibe a quantidade (e percentual) de acertos do usuário em relação ao total
+print(f"Você acertou {acertos} de {total_perguntas} questões ({int(porcentagem_acertos)}%).")
+
+# Opção - Utilizar porcentagem para automatizar o cálculo
 # Verifica a quantidade de acertos de usuário e exibe uma mensagem personalizada
 # 9-10 acertos
 if acertos > 8:
