@@ -27,9 +27,9 @@ motorcycles.insert(0, "ducati") # lista.insert(indice, elemento)
 print(motorcycles)
 motorcycles.insert(2, "harley")
 print(motorcycles)
-motorcycles.insert(-1, "harley") #Não vai para o final -> Colocou o elemento novo no lugar do último deslocou este para a direita
+motorcycles.insert(-1, "harley") #Não vai para o final -> Colocou o elemento novo no lugar em que estava o último (4) e deslocou este para a direita (5)
 print(motorcycles)
-motorcycles.insert(8, "royal") #Adiciona no fim (índice não ocupado/existente)
+motorcycles.insert(8, "royal") #Adiciona no fim (índice não ocupado/ não existente) -> adiciona no fim (primeiro índice inexistente) e não necessariamente no 8
 print(motorcycles)
 
 # Deleta um elemento de uma posição específica da lista (sem possibilidade de acesso posterior)
@@ -38,7 +38,7 @@ print(motorcycles)
 # deletedOne = (del motorcycles[0]) #nem é possível atribuir
 
 # Remove o último elemento da lista, com possibilidade de acesso ao item posteriormente
-popped_motorcycles = motorcycles.pop()
+popped_motorcycles = motorcycles.pop() #remove o valor da lista e o armazena em uma variável
 print(motorcycles)
 print(popped_motorcycles)
 print(f"Você removeu '{popped_motorcycles.title()}'") # Permite trabalhar o valor removido e exibir detalhes em mensagens, por exemplo
@@ -56,7 +56,7 @@ print(motorcycles) #Remove apenas a primeira ocorrência do valor (para remover 
 given_motorcycle = "suzuki"
 motorcycles.remove(given_motorcycle)
 print(motorcycles)
-print(f"My {given_motorcycle} was given away.")
+print(f"My {given_motorcycle.title()} was given away.")
 
 
 # removed_motorcycle = motorcycles.remove("suzuki")
